@@ -12,6 +12,9 @@
     "@angular/platform-browser": "~17.3.0",
     "@angular/platform-browser-dynamic": "~17.3.0",
     "@angular/router": "~17.3.0",
+    "@nativescript-community/ui-collectionview": "^5.3.34",
+    "@nativescript-community/ui-collectionview-swipemenu": "^5.3.34",
+    "@nativescript-community/ui-collectionview-waterfall": "^5.3.34",
     "@nativescript/angular": "^17.0.0",
     "@nativescript/core": "~8.7.0",
     "@nativescript/theme": "~3.0.2",
@@ -21,6 +24,7 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "~17.3.0",
     "@angular/compiler-cli": "~17.3.0",
+    "@nativescript/ios": "8.7.2",
     "@nativescript/types": "~8.7.0",
     "@nativescript/webpack": "~5.0.19",
     "@ngtools/webpack": "~17.3.0",
