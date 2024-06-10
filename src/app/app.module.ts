@@ -3,13 +3,14 @@ import { NativeScriptModule } from '@nativescript/angular'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
-import { ItemsComponent } from './item/items.component'
-import { ItemDetailComponent } from './item/item-detail.component'
+
+import { InstallModule, COMPONENTS } from './install.module';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   bootstrap: [AppComponent],
-  imports: [NativeScriptModule, AppRoutingModule],
-  declarations: [AppComponent, ItemsComponent, ItemDetailComponent],
+  imports: [NativeScriptModule, AppRoutingModule, InstallModule],
+  declarations: [AppComponent, MenuComponent, ...COMPONENTS],
   providers: [],
   schemas: [NO_ERRORS_SCHEMA],
 })

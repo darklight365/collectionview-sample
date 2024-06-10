@@ -2,14 +2,18 @@ import { NgModule } from '@angular/core'
 import { Routes } from '@angular/router'
 import { NativeScriptRouterModule } from '@nativescript/angular'
 
-import { ItemsComponent } from './item/items.component'
-import { ItemDetailComponent } from './item/item-detail.component'
+import { MenuComponent } from './menu/menu.component';
+import { demos } from './install.module';
 
+const demoRoutes = [];
+for (const demo of demos) {
+    demoRoutes.push({ path: demo.path, component: demo.component });
+}
 const routes: Routes = [
-  { path: '', redirectTo: '/items', pathMatch: 'full' },
-  { path: 'items', component: ItemsComponent },
-  { path: 'item/:id', component: ItemDetailComponent },
-]
+  { path: '', redirectTo: '/menu', pathMatch: 'full' },
+  { path: 'menu', component: MenuComponent },
+  ...demoRoutes
+];
 
 @NgModule({
   imports: [NativeScriptRouterModule.forRoot(routes)],
