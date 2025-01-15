@@ -44,6 +44,13 @@ export class SwipeMenuComponent {
             }
         } as any;
         console.log(`drawerTranslation invoked\n side: ${side}, width: ${width}, value: ${value}, delta: ${delta}, progress: ${progress}`);
+        // Ensure that we capture the height of the current row/swipemenu (used within template):
+        if (swipeMenu) {
+            if (__ANDROID__) {
+                // If the menu's backdrop is left enabled then the Android touch/tap events are not bubbled to the component
+                swipeMenu.backDropEnabled = (progress === 1);
+            }
+        }
         return result;
     }
 
