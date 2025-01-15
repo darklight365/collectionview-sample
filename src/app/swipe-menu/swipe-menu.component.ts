@@ -33,7 +33,7 @@ export class SwipeMenuComponent {
         { index: 19, name: 'ASBESTOS', color: '#7f8c8d' }
     ]);
 
-    drawerTranslationFunction(side, width, value, delta, progress) {
+    drawerTranslationFunction(side, width, value, delta, progress, swipeMenu) {
         const result = {
             mainContent: {
                 translateX: side === 'right' ? -delta : delta,
